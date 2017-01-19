@@ -1,0 +1,18 @@
+<div *ngIf="films.length">
+  <p><strong>Filter by Company:</strong> 
+    <select #filter (change)="filterResults(filter.value)">
+      <option value="{{no_filter}}">All</option>
+      <option *ngFor="let company of companies" value="{{company}}">{{company}}</option>
+    </select>
+  </p>
+  <ul class="list">
+    <li class="list-item" *ngFor="let film of films">
+      <img class="thumbnail" src="{{film.image}}" alt="{{film.name}}" title="{{film.name}}" />
+      <div class="text"><a href="{{film.url}}" target="_blank" title="{{film.name}}">{{film.name}}</a> <strong>by</strong> <i>{{film.company}}</i></div>
+    </li>
+  </ul>
+</div>
+
+<div *ngIf="!films.length">
+    Sorry, there are no films showing at the moment - or we couldn't retrieve them
+</div>
