@@ -1,10 +1,10 @@
-import { VvooshPage } from './app.po';
+import { FilmsPage } from './app.po';
 
-describe('vvoosh App', function() {
-  let page: VvooshPage;
+describe('films App', function() {
+  let page: FilmsPage;
 
   beforeEach(() => {
-    page = new VvooshPage();
+    page = new FilmsPage();
   });
 
   it('should display message saying app works', () => {

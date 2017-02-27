@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class VvooshPage {
+export class FilmsPage {
   navigateTo() {
     return browser.get('/');
   }
